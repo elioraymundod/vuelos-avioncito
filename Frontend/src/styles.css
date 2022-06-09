@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+table {
+    text-align: justify;
+    margin: auto;
+    width: 100%;
+  }
+  
+  td {
+    text-align: left;
+  }
+  
+  .header-table {
+    background-color: #1369a0;
+    color: white;
+    text-align: left;
+    font-size: 14px;
+  }

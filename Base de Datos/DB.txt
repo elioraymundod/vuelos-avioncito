@@ -1,0 +1,43 @@
+create database vuelosavioncito;
+
+use vuelosavioncito;
+
+create table vuelos(
+	id int primary key,
+	noPasaporte varchar(25),
+	aeropuertoEntrada varchar(50),
+	aeropuertoSalida varchar(50),
+	codigoVuelo varchar(20),
+	fechaHoraIngreso timestamp,
+	fechaHoraSalida timestamp
+);
+
+insert into vuelos(id, noPasaporte, aeropuertoEntrada, aeropuertoSalida, codigoVuelo, fechaHoraIngreso, fechaHoraSalida)
+values (1, '2874376040111', 'LAX - Los Angeles California', 'Aeropuerto Internacional La Aurora', '2207', '2022-01-01 08:30:00', '2022-01-01 14:35:00');
+
+insert into vuelos(id, noPasaporte, aeropuertoEntrada, aeropuertoSalida, codigoVuelo, fechaHoraIngreso, fechaHoraSalida)
+values (2, '6548987598552', 'LAX - Los Angeles California', 'Aeropuerto Internacional La Aurora', '2207', '2022-01-01 08:30:00', '2022-01-01 14:35:00');
+
+insert into vuelos(id, noPasaporte, aeropuertoEntrada, aeropuertoSalida, codigoVuelo, fechaHoraIngreso, fechaHoraSalida)
+values (3, '9965576040111', 'Aeropuerto de Buenos Aires', 'Aeropuerto Internacional La Castellana', '2207', '2022-01-01 08:30:00', '2022-01-01 14:35:00');
+
+insert into vuelos(id, noPasaporte, aeropuertoEntrada, aeropuertoSalida, codigoVuelo, fechaHoraIngreso, fechaHoraSalida)
+values (4, '3568985525456', 'Aeropuerto de Jose Maria', 'Aeropuerto de Maria Jose', '2207', '2022-01-01 08:30:00', '2022-01-01 14:35:00');
+
+insert into vuelos(id, noPasaporte, aeropuertoEntrada, aeropuertoSalida, codigoVuelo, fechaHoraIngreso, fechaHoraSalida)
+values (5, '1260045680088', 'Aeropuerto Internacional San Raymundo', 'Aeropuerto Internacional San Juan', '2208A', '2022-06-01 08:30:00', '2022-06-01 14:35:00');
+
+insert into vuelos(id, noPasaporte, aeropuertoEntrada, aeropuertoSalida, codigoVuelo, fechaHoraIngreso, fechaHoraSalida)
+values (6, '9956045654055', 'Aeropuerto de Luxemburto', 'Aeropuerto Tigres de Jumay', '2208A', '2022-06-01 08:30:00', '2022-06-01 14:35:00');
+
+insert into vuelos(id, noPasaporte, aeropuertoEntrada, aeropuertoSalida, codigoVuelo, fechaHoraIngreso, fechaHoraSalida)
+values (7, '9875056548885', 'Aeropuerto Xinabajul ', 'Aeropuerto Internacional Mixco Viejo', '2208A', '2022-06-01 08:30:00', '2022-06-01 14:35:00');
+
+insert into vuelos(id, noPasaporte, aeropuertoEntrada, aeropuertoSalida, codigoVuelo, fechaHoraIngreso, fechaHoraSalida)
+values (8, '3345678954055', 'Aeropuerto San Elio', 'Aeropuerto Internacional San Diaz', '2209A', '2022-01-01 01:30:00', '2022-01-01 14:35:00');
+
+insert into vuelos(id, noPasaporte, aeropuertoEntrada, aeropuertoSalida, codigoVuelo, fechaHoraIngreso, fechaHoraSalida)
+values (9, '1122334455667', 'Aeropuerto San Jose California', 'Aeropuerto Internacional La Aurora', '2209A', '2022-01-01 01:30:00', '2022-01-01 14:35:00');
+
+insert into vuelos(id, noPasaporte, aeropuertoEntrada, aeropuertoSalida, codigoVuelo, fechaHoraIngreso, fechaHoraSalida)
+values (10, '665405689785', 'LAX - Los Angeles California', 'Aeropuerto Internacional Contreras', '2209A', '2022-01-01 01:30:00', '2022-01-01 14:35:00');

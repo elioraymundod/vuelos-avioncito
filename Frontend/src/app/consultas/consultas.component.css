@@ -1,0 +1,42 @@
+.titulo{
+    text-align: center; 
+    background: #1369a0; 
+    color: white; 
+    height: 40px; 
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    margin: 3%;
+}
+
+.margenArriba {
+    margin: 3%;
+}
+
+.tamanio{
+    width: 100%;
+}
+
+.tamanioTextArea{
+    height: 100px;
+}
+
+.botones{
+    margin-left: 2%;
+    color: white;
+    background-color: #1369a0;
+}
+
+.margenBotones {
+    margin-left: 2%;
+}
+
+::ng-deep .cdk-overlay-container{
+    z-index: 1200 !important;
+}
+
+.rechazada {
+    color: red;
+    font-weight: bold;
+  }

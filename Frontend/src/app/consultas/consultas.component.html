@@ -1,0 +1,79 @@
+<div class="card-body">
+    <mat-card-title class="titulo">Bienvenido al Portal Avioncito de Papel</mat-card-title>
+
+    <mat-tab-group>
+        <mat-tab label="Vuelos pendientes"> 
+            <mat-card class="margenArriba">
+                <div class="container">
+                    
+                    <div class="col-12">
+                        <form [formGroup]="filtrosFormGroup">
+                            <div class="row">
+                                <mat-form-field class="col-lg-4 col-md-4 col-sm-12">
+                                    <mat-label>Codigo Vuelo</mat-label>
+                                    <input matInput #codigoVuelo placeholder="" maxlength="24" formControlName="codigoVueloFormControl">
+                                </mat-form-field>
+
+                                <button mat-raised-button class="botones margenBotones" type="button" [disabled]="filtrosFormGroup.invalid" (click)="realizarBusqueda(filtrosFormGroup.value)">Consultar</button>
+
+                                <button mat-raised-button class="botones margenBotones" type="button" (click)="limpiar()">Limpiar</button>
+
+                                <button *ngIf="btnExcel == true" mat-raised-button class="botones margenBotones" type="button" (click)="exportarExcel()">Exportar Excel</button>
+                            </div>
+                        </form>
+                    </div>
+                    <hr>
+                    <div>
+                        <div class="mat-elevation-z8 mt-2">
+                            <table  mat-table [dataSource]="dataSource" id="tablaDatos">
+                                <!-- Columna codigo vuelo -->
+                                <ng-container matColumnDef="codigoVuelo">
+                                    <th mat-header-cell *matHeaderCellDef class="header-table">Codigo Vuelo</th>
+                                    <td mat-cell *matCellDef="let dato"> {{dato.codigoVuelo}} </td>
+                                </ng-container>
+
+                                <!-- Columna Numero pasaporte -->
+                                <ng-container matColumnDef="noPasaporte">
+                                    <th mat-header-cell *matHeaderCellDef class="header-table">No. pasaporte</th>
+                                    <td mat-cell *matCellDef="let dato"> {{dato.noPasaporte}} </td>
+                                </ng-container>
+
+                                <!-- Columna Aereopuerto salida -->
+                                <ng-container matColumnDef="aeorpuertoSalida">
+                                    <th mat-header-cell *matHeaderCellDef class="header-table">Aereopuerto Salida</th>
+                                    <td mat-cell *matCellDef="let dato"> {{dato.aeropuertoSalida}} </td>
+                                </ng-container>
+
+                                <!-- Columna Aereopuerto Entrada -->
+                                <ng-container matColumnDef="aeropuertoIngreso">
+                                    <th mat-header-cell *matHeaderCellDef class="header-table">Aereopuerto Entrada</th>
+                                    <td mat-cell *matCellDef="let dato"> {{dato.aeropuertoEntrada}} </td>
+                                </ng-container>
+
+                                <!-- Columna Fecha y hora salida-->
+                                <ng-container matColumnDef="horaSalida">
+                                    <th mat-header-cell *matHeaderCellDef class="header-table">Fecha y Hora salida</th>
+                                    <td mat-cell *matCellDef="let dato"> {{dato.fechaHoraSalida}} </td>
+                                </ng-container>
+
+                                <!-- Columna Fecha y hora Ingreso-->
+                                <ng-container matColumnDef="horaIngreso">
+                                    <th mat-header-cell *matHeaderCellDef class="header-table">Fecha y Hora Ingreso</th>
+                                    <td mat-cell *matCellDef="let dato"> {{dato.fechaHoraIngreso}} </td>
+                                </ng-container>
+
+                                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                            </table>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div > <!--*ngIf="mostrarTabla === true"-->
+                </div>
+            </mat-card>
+
+        </mat-tab>
+
+    </mat-tab-group>
+</div>
